@@ -1,0 +1,93 @@
+<%- include('includes/head') %>
+<%- include('includes/nav') %>
+
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <h2 class="text-center my-5">Treino <%= treino.letra %> - <%= treino.grupo %></h2>
+        <p class="text-center">Edite suas Cargas</p>
+
+        <%- include('includes/messages') %>
+
+        <form action="/treinos/update/<%= treino._id %>" method="POST" class="my-3 mb-5">
+          <input type="hidden" name="_csrf" value=<%= csrfToken %>>
+          <div class="form-group">
+            <label>Adicione um Exercício</label>
+            <div class="d-flex">
+              <input type="text" class="form-control w-25" name="Ex1" value="<%= treino.Ex1 %>">
+              <input type="text" class="form-control w-25 mx-1" name="rep1" value="<%= treino.rep1 %>">
+              <input type="text" class="form-control w-25 mx-2" name="prEx1" value="<%= treino.prEx1 %>">
+              <input type="text" class="form-control w-25 mx-2" name="rmEx1" value="<%= treino.rmEx1 %>">
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Adicione um Exercício</label>
+            <div class="d-flex">
+              <input type="text" class="form-control w-25" name="Ex2" value="<%= treino.Ex2 %>">
+              <input type="text" class="form-control w-25 mx-1" name="rep2" value="<%= treino.rep2 %>">
+              <input type="text" class="form-control w-25 mx-2" name="prEx2" value="<%= treino.prEx2 %>">
+              <input type="text" class="form-control w-25 mx-2" name="rmEx2" value="<%= treino.rmEx2 %>">
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Adicione um Exercício</label>
+            <div class="d-flex">
+              <input type="text" class="form-control w-25" name="Ex3" value="<%= treino.Ex3 %>">
+              <input type="text" class="form-control w-25 mx-1" name="rep3" value="<%= treino.rep3 %>">
+              <input type="text" class="form-control w-25 mx-2" name="prEx3" value="<%= treino.prEx3 %>">
+              <input type="text" class="form-control w-25 mx-2" name="rmEx3" value="<%= treino.rmEx3 %>">
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Adicione um Exercício</label>
+            <div class="d-flex">
+              <input type="text" class="form-control w-25" name="Ex4" value="<%= treino.Ex4 %>">
+              <input type="text" class="form-control w-25 mx-1" name="rep4" value="<%= treino.rep4 %>">
+              <input type="text" class="form-control w-25 mx-2" name="prEx4" value="<%= treino.prEx4 %>">
+              <input type="text" class="form-control w-25 mx-2" name="rmEx4" value="<%= treino.rmEx4 %>">
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Adicione um Exercício</label>
+            <div class="d-flex">
+              <input type="text" class="form-control w-25" name="Ex5" value="<%= treino.Ex5 %>">
+              <input type="text" class="form-control w-25 mx-1" name="rep5" value="<%= treino.rep5 %>">
+              <input type="text" class="form-control w-25 mx-2" name="prEx5" value="<%= treino.prEx5 %>">
+              <input type="text" class="form-control w-25 mx-2" name="rmEx5" value="<%= treino.rmEx5 %>">
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Adicione um Exercício</label>
+            <div class="d-flex">
+              <input type="text" class="form-control w-25" name="Ex6" value="<%= treino.Ex6 %>">
+              <input type="text" class="form-control w-25 mx-1" name="rep6" value="<%= treino.rep6 %>">
+              <input type="text" class="form-control w-25 mx-2" name="prEx6" value="<%= treino.prEx6 %>">
+              <input type="text" class="form-control w-25 mx-2" name="rmEx6" value="<%= treino.rmEx6 %>">
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Adicione um Exercício</label>
+            <div class="d-flex">
+              <input type="text" class="form-control w-25" name="Ex7" value="<%= treino.Ex7 %>">
+              <input type="text" class="form-control w-25 mx-1" name="rep7" value="<%= treino.rep7 %>">
+              <input type="text" class="form-control w-25 mx-2" name="prEx7" value="<%= treino.prEx7 %>">
+              <input type="text" class="form-control w-25 mx-2" name="rmEx7" value="<%= treino.rmEx7 %>">
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Adicione um Exercício</label>
+            <div class="d-flex">
+              <input type="text" class="form-control w-25" name="Ex8" value="<%= treino.Ex8 %>">
+              <input type="text" class="form-control w-25 mx-1" name="rep8" value="<%= treino.rep8 %>">
+              <input type="text" class="form-control w-25 mx-2" name="prEx8" value="<%= treino.prEx8 %>">
+              <input type="text" class="form-control w-25 mx-2" name="rmEx8" value="<%= treino.rmEx8 %>">
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary">Cadastrar<buttona></buttona>
+        </form>
+
+    </div>
+  </div>
+</div>
+
+<%- include('includes/footer') %>

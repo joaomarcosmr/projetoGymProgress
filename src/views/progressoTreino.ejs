@@ -1,0 +1,38 @@
+<%- include('includes/head') %>
+<%- include('includes/nav') %>
+
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <h2 class="text-center my-5">Sua Ficha de Treino</h2>
+        <div class="responsive-table">
+          <table class="table my-3">
+              <thead>
+                <tr>
+                  <th>Exercício</th>
+                  <th>Séries</th>
+                  <th>Peso Máximo</th>
+                  <th>Repetições Máximas</th>
+                </tr>
+              </thead>
+              <% treino.forEach(treino => { %>
+                <tbody>
+                  <% for(let num = 1; num <= 8; num++) { %>
+                    <%if(treino['Ex' + num] || treino['prEx' + num] || treino['rmEx' + num]){%>
+                    <tr>
+                      <td><%= treino['Ex' + num] %></td>
+                      <td><%= treino['rep' + num] %></td>
+                      <td><%= treino['prEx' + num] %></td>
+                      <td><%= treino['rmEx' + num] %></td>
+                    </tr>
+                    <% } %>
+                  <% } %>
+                </tbody>
+              <% }); %>
+          </table>
+        </div>
+    </div>
+  </div>
+</div>
+
+<%- include('includes/footer') %>

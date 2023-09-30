@@ -1,0 +1,107 @@
+<%- include('includes/head') %>
+<%- include('includes/nav') %>
+
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <h2 class="text-center my-5">Cadastre seu treino</h2>
+        <p class="text-center">Cadastre seu treino no botão abaixo e registre seu progresso!</p>
+
+        <%- include('includes/messages') %>
+
+              <form action="/treinos/register/" method="POST" class="my-3 mb-5 form-treino">
+                <input type="hidden" name="_csrf" value=<%= csrfToken %>>
+                <div class="form-group">
+                  <label>Treino:</label>
+                  <select name="letra">
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="C">C</option>
+                    <option value="D">D</option>
+                    <option value="E">E</option>
+                    <option value="F">F</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label>Grupo Muscular</label>
+                  <input type="text" class="form-control" name="grupo" placeholder="Ex: Peito e Tríceps">
+                </div>
+                <div class="form-group">
+                  <label>Adicione um Exercício</label>
+                  <div class="d-flex">
+                    <input type="text" class="form-control w-25" name="Ex1" placeholder="Nome do Exercício">
+                    <input type="text" class="form-control w-25 mx-1" name="rep1" placeholder="Séries e Repetições Ex: 4x12">
+                    <input type="text" class="form-control w-25 mx-2" name="prEx1" placeholder="Peso Máximo (PR)">
+                    <input type="text" class="form-control w-25 mx-2" name="rmEx1" placeholder="Repetição Máxima (RM)">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label>Adicione um Exercício</label>
+                  <div class="d-flex">
+                    <input type="text" class="form-control w-25" name="Ex2" placeholder="Nome do Exercício">
+                    <input type="text" class="form-control w-25 mx-1" name="rep2" placeholder="Séries e Repetições Ex: 4x12">
+                    <input type="text" class="form-control w-25 mx-2" name="prEx2" placeholder="Peso Máximo (PR)">
+                    <input type="text" class="form-control w-25 mx-2" name="rmEx2" placeholder="Repetição Máxima (RM)">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label>Adicione um Exercício</label>
+                  <div class="d-flex">
+                    <input type="text" class="form-control w-25" name="Ex3" placeholder="Nome do Exercício">
+                    <input type="text" class="form-control w-25 mx-1" name="rep3" placeholder="Séries e Repetições Ex: 4x12">
+                    <input type="text" class="form-control w-25 mx-2" name="prEx3" placeholder="Peso Máximo (PR)">
+                    <input type="text" class="form-control w-25 mx-2" name="rmEx3" placeholder="Repetição Máxima (RM)">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label>Adicione um Exercício</label>
+                  <div class="d-flex">
+                    <input type="text" class="form-control w-25" name="Ex4" placeholder="Nome do Exercício">
+                    <input type="text" class="form-control w-25 mx-1" name="rep4" placeholder="Séries e Repetições Ex: 4x12">
+                    <input type="text" class="form-control w-25 mx-2" name="prEx4" placeholder="Peso Máximo (PR)">
+                    <input type="text" class="form-control w-25 mx-2" name="rmEx4" placeholder="Repetição Máxima (RM)">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label>Adicione um Exercício</label>
+                  <div class="d-flex">
+                    <input type="text" class="form-control w-25" name="Ex5" placeholder="Nome do Exercício">
+                    <input type="text" class="form-control w-25 mx-1" name="rep5" placeholder="Séries e Repetições Ex: 4x12">
+                    <input type="text" class="form-control w-25 mx-2" name="prEx5" placeholder="Peso Máximo (PR)">
+                    <input type="text" class="form-control w-25 mx-2" name="rmEx5" placeholder="Repetição Máxima (RM)">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label>Adicione um Exercício</label>
+                  <div class="d-flex">
+                    <input type="text" class="form-control w-25" name="Ex6" placeholder="Nome do Exercício">
+                    <input type="text" class="form-control w-25 mx-1" name="rep6" placeholder="Séries e Repetições Ex: 4x12">
+                    <input type="text" class="form-control w-25 mx-2" name="prEx6" placeholder="Peso Máximo (PR)">
+                    <input type="text" class="form-control w-25 mx-2" name="rmEx6" placeholder="Repetição Máxima (RM)">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label>Adicione um Exercício</label>
+                  <div class="d-flex">
+                    <input type="text" class="form-control w-25" name="Ex7" placeholder="Nome do Exercício">
+                    <input type="text" class="form-control w-25 mx-1" name="rep7" placeholder="Séries e Repetições Ex: 4x12">
+                    <input type="text" class="form-control w-25 mx-2" name="prEx7" placeholder="Peso Máximo (PR)">
+                    <input type="text" class="form-control w-25 mx-2" name="rmEx7" placeholder="Repetição Máxima (RM)">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label>Adicione um Exercício</label>
+                  <div class="d-flex">
+                    <input type="text" class="form-control w-25" name="Ex8" placeholder="Nome do Exercício">
+                    <input type="text" class="form-control w-25 mx-1" name="rep8" placeholder="Séries e Repetições Ex: 4x12">
+                    <input type="text" class="form-control w-25 mx-2" name="prEx8" placeholder="Peso Máximo (PR)">
+                    <input type="text" class="form-control w-25 mx-2" name="rmEx8" placeholder="Repetição Máxima (RM)">
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Cadastrar<buttona>
+              </form>
+    </div>
+  </div>
+</div>
+
+<%- include('includes/footer') %>

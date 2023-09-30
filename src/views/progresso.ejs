@@ -1,0 +1,35 @@
+<%- include('includes/head') %>
+<%- include('includes/nav') %>
+
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <h2 class="text-center my-5">Selecione seu Treino</h2>
+      <%- include('includes/messages') %>
+        <div class="responsive-table">
+          <table class="table my-3">
+              <thead>
+                <tr>
+                  <th>Treino</th>
+                  <th>Grupo Muscular</th>
+                  <th>Ficha de Treino</th>
+                  <th colspan="2">Alterações</th>
+                </tr>
+              </thead>
+              <% treino.forEach(treino => { %>
+              <tbody>
+                <tr>
+                  <td><%= treino.letra %></td>
+                  <td><%= treino.grupo %></td>
+                  <td><a href="/treinos/progresso/<%= treino._id %>">Ver Treino</a></td>
+                  <td><a class="text-info" href="/treinos/update/<%= treino._id %>">Editar PR e RM</a>/<a class="text-danger" href="/treinos/delete/<%= treino._id %>">Excluir</a></td>
+                </tr>
+              </tbody>
+              <% }); %>
+          </table>
+        </div>
+    </div>
+  </div>
+</div>
+
+<%- include('includes/footer') %>

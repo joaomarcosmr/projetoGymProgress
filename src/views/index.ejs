@@ -1,0 +1,24 @@
+<%-include('includes/head')%>
+<%- include('includes/nav') %>
+
+
+  <section class="container">
+    <h1 class="text-center mb-5" style="margin-top: 60px;">GymProgress <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 640 512"><style>svg{fill:#000000}</style><path d="M96 64c0-17.7 14.3-32 32-32h32c17.7 0 32 14.3 32 32V224v64V448c0 17.7-14.3 32-32 32H128c-17.7 0-32-14.3-32-32V384H64c-17.7 0-32-14.3-32-32V288c-17.7 0-32-14.3-32-32s14.3-32 32-32V160c0-17.7 14.3-32 32-32H96V64zm448 0v64h32c17.7 0 32 14.3 32 32v64c17.7 0 32 14.3 32 32s-14.3 32-32 32v64c0 17.7-14.3 32-32 32H544v64c0 17.7-14.3 32-32 32H480c-17.7 0-32-14.3-32-32V288 224 64c0-17.7 14.3-32 32-32h32c17.7 0 32 14.3 32 32zM416 224v64H224V224H416z"/></svg></h1>
+
+    <%- include('includes/messages') %>
+
+    <p class="text-center">O seu aplicativo para acompanhar progresso <br> de treino na sua academia.</p>
+
+    <% if (!user) { %>
+    <p class="text-center my-5">Faça <a href="/login/index">Login</a> ou <a href="/login/register">Registre-se</a> para Começar!</p>
+    <% } else { %>
+    <p class="text-center my-5">Seja bem-vindo, <b><%= user.nome %>!</b></p>
+    <div class="text-center">
+      <a href="/treinos/progresso" class="btn btn-outline-success" style="text-decoration: none; width: 300px;">Ver Progresso de Treino</a><br>
+      <a href="/treinos/register" class="btn btn-outline-primary my-3" style="text-decoration: none; width: 300px;">Cadastrar Novo Treino</a>
+    </div>
+    <% } %>
+  </section>
+
+
+  <%-include('includes/footer')%>
